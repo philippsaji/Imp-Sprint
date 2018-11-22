@@ -1,0 +1,48 @@
+.feature{
+    color: $color-greyish;
+
+    .feature__heading {
+        text-align: center;
+        //padding-right: 30px;
+
+        .heading-secondary {
+            @include style-heading-secondary;
+        }
+
+        a {
+            text-decoration: none;
+            color: #287b7e;
+            padding-left: 5px;
+        }
+    }
+}
+
+.p1 {
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+    
+}
+
+// .p2 {
+//     position: relative;
+//     bottom: 20px;
+//     left: 55px; 
+// }
+
+.pg {
+    position: relative;
+    bottom: 25px;
+    color: $color-greyish;
+}
+
+
+
+
+
+
+
+
+
+
+

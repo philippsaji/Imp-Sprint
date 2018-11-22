@@ -1,0 +1,27 @@
+// Utilities
+// ==============
+
+.clearfix { 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.visuallyhidden { 
+    @include visuallyhidden(); 
+}
+
+.hidden-portable {
+    @include media-query(portable) {
+        @include visuallyhidden();
+    }
+}
+
+.visible-portable {
+    @include media-query(note-and-up) {
+        @include visuallyhidden();
+    }
+}
+

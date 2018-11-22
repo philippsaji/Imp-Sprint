@@ -1,0 +1,40 @@
+{
+  "name": "nz-framework",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "npx node-sass --output-style nested --indent-type tab --indent-with 4 -o dist/css src/scss/ && npx uglifycss dist/css/styles.css > dist/css/styles.min.css",
+    "autoprefixer": "npx postcss -u autoprefixer -r dist/css/",
+    "compilepug": "npx pug src/pug/pages/ -P --out dist/html/",
+    "uglify": "npx babel --presets es2015 src/js/ --out-file dist/js/main.js && npx uglifyjs dist/js/main.js -m -c -o dist/js/main.min.js",
+    "icons": "npx svgo -f src/images/icons && npx svg-sprite-generator -d src/images/icons -o dist/images/icons.svg",
+    "serve": "npx browser-sync start --server --files 'dist/css/*.css', 'dist/js/*.js', 'dist/html/*.html' --startPath 'dist/html/'",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "build:js": "npm run uglify",
+    "build:html": "npm run compilepug",
+    "build:images": "npm run icons",
+    "build:all": "npm run build:html && npm run build:css && npm run build:js",
+    "watch:css": "npx onchange 'src/scss/**' -- npm run build:css",
+    "watch:js": "npx onchange 'src/js/**' -- npm run build:js",
+    "watch:html": "npx onchange 'src/pug/**' -- npm run build:html",
+    "watch:all": "npx parallelshell 'npm run build:all' 'npm run serve' 'npm run watch:css' 'npm run watch:js' 'npm run watch:html'",
+    "postinstall": "npx parallelshell 'mkdir -p dist/images' 'mkdir -p dist/html' 'mkdir -p dist/css' 'mkdir -p dist/js' && npm run watch:all"
+  },
+  "devDependencies": {
+    "a11y": "^0.5.1",
+    "autoprefixer": "^8.6.1",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.4",
+    "node-sass": "^4.9.0",
+    "onchange": "^4.0.0",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^5.0.0",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^1.0.5",
+    "uglify-js": "^3.4.0",
+    "uglifycss": "0.0.29"
+  }
+}

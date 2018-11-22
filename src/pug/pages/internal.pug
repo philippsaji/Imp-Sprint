@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        title NZ Framework Starter PUG File
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" type="text/css" href="../css/styles.css")
+    body
+        header.container
+            nav#primary-nav
+                ul.bare-list
+                    li
+                        a(href="./index.html") Homepage
+                    li
+                        a(href="./internal.html") Internal
+        main.container
+            h1 NZ Framework starter internal page (PUG)
+            p Starter internal page for NZ framework, this isn't using any includes, just has everything in the same pug file.
+            p
+                a(href="/dist/html") back to home page
+
+        footer.container
+            nav#footer-nav
+                ul.bare-list
+                    li
+                        a(href="./index.html") Homepage
+                    li
+                        a(href="./internal.html") Internal
+        script(src="//code.jquery.com/jquery-3.3.1.min.js")
+        script(src="../js/main.js")
+

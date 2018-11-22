@@ -1,0 +1,127 @@
+/*
+Component: Header
+*/
+
+
+header {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+
+    .infratec-logo {
+        width: 235px;
+        height: 81px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        right: 30%;
+    }
+    
+    #primary-nav {
+        width: 80%;
+        padding: 4px;
+        float: left;
+        font-family: $font-tertiary;
+
+        ul {
+            width: auto;
+            margin: 0 auto;
+            padding: 0;
+            
+
+            li {
+                display: inline-block;
+                margin: 2px 30px;
+                line-height: normal;
+                
+                a {
+                    color: #525252;
+                    text-decoration: none; 
+                    position: relative;
+                    z-index: 1;  
+
+                    a:hover {
+                        color: $color-greyish;
+                    
+                        a:hover:after {
+                            display: block;
+                            position: absolute;
+                            width: 50px;
+                        }
+                    }
+                    
+                }
+            }        
+        }
+    }
+
+    .nav-arrange {
+        position: relative;
+        bottom: 22px;
+        left: 25%;
+    
+
+        .about-us {
+            @include style-text;
+
+            .expand-down {
+                padding-left: 5px;
+                
+            }
+        }
+
+        .what-we-do {
+            @include style-text;
+        }
+
+        .project {
+            @include style-text;
+
+            .expand-up {
+                padding-left: 5px;
+            }
+        }
+
+        .news {
+            @include style-text;
+        }
+
+        .contact-us {
+            @include style-text;
+        }
+    }
+    
+
+
+    form {
+        width: 20%;
+        float: left;
+
+        .search {
+            background: url(../images/search/search-material.png) no-repeat scroll 10px 45px ;
+            max-width: 197px;
+            height: 114px;
+            background-color: #287b7e;
+            color: white;
+            position: relative;
+            left: 30%;
+            border: none;
+        }
+
+        .search-icon-bar {
+            position: relative;
+            left: 2%;
+            text-decoration: none; 
+            border: none;
+            border-radius: none; 
+            
+        }
+
+    }
+}
+
+
+
+    
+
+

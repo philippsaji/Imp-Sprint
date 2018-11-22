@@ -1,0 +1,17 @@
+// Typography
+// ==============
+@import url('//fonts.googleapis.com/css?family=Raleway:300,400,500,700,900');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('//fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600,900'); 
+// @import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css');
+
+$font-primary:'Raleway', sans-serif;
+$font-secondary:'Open Sans', serif;
+$font-tertiary:'Encode Sans Condensed';
+
+// Font Weights
+$light      :  300;
+$normal     :  400;
+$medium     :  500;
+$bold       :  700;
+$ultrabold  :  900;
